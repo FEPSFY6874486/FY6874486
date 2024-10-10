@@ -74,6 +74,31 @@ tr:nth-child(even) {
     document.getElementByld("date_time").innerHTML = d;
     
   </script>
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Change Button Colour</title>
+    </head>
+    <button id="colorButton">Click me to chagne colour</button>
+
+  <script>
+    //Get a reference to the button element
+    var button = document.getElementByld("colorButton");
+
+    //Function to change the buttno color
+    function changeColor(){
+      //Generate random color (hexadecimal)
+      var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+      // Set the button's background color to the random color
+      button.style.backgroundColor = randomColor;
+    }
+    // Add a click event litener to the button
+    button.addEventListener("click", changeColor);
+  </script>
+</body>
+</html>
 <h3 id="Main Article">Main Article</h3>
   <p class="ex1">
     <pre>
