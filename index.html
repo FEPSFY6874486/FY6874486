@@ -85,7 +85,7 @@ tr:nth-child(even) {
       Waterloo and travel as far as Weymouth in Dorset. But in this article, we’ll be focussing on the SWML from Waterloo to Woking and then the PDL to Guildford which leaves the SWML at Woking, hooks around past Worplesdon and arrives at Guildford. (‘South Western Railway’, 2024; ‘South Western Main Line’, 
       2024; ‘Portsmouth Direct Line’, 2024)
       </p>
-      <p>
+      <p id=5_Text>
       There are 3 core aspects when it comes to timetabling, timetabling (timing), roster diagrams and rolling stock diagrams. Each of these have you could say own subset among them, but that’s a bit too complicated, we’ll be mainly looking at the surface of the timing 
       section and what they do to make the timetable as optimal as possible.
         </p>
@@ -94,11 +94,11 @@ tr:nth-child(even) {
   
 <h3 id="Rolling Stock">Rolling Stock</h3>
   <p class="ex1">
-    <pre id=2_Text>
+    <p id=2_Text>
       The trains that we’ll be focussing on are SWRs EMU fleet of 455s, 458/5s, 444s and 450s. SWR in the past used to run 707s and 456s however, these are no longer in service. SWR are also slowly rolling out their new fleet of 701s (Arterio trains).
       Below you’ll be able to look at them, as you can see they’re no the biggest of units however, you can connect the 450s and 444s together and you’ll be able to pass through them. The new 701 however, is a fixed unit so it won’t be needed to be joined with another 
       train. When they used to operate the 456 they could have 10 car units, however, this is no longer the case as they’ve been scrapped.
-    </pre>
+    </p>
 
   <h3 id="Timing">Timing</h3>
   <p class="ex1">
@@ -204,8 +204,9 @@ tr:nth-child(even) {
     const TwoCount = displayWordCount("2_Text");
     const ThreeCount = displayWordCount("3_Text");
     const FourCount = displayWordCount("4_Text");
+    const FiveCount = displayWordCount("5_Text");
     // Calculate the sum of all selected sections
-    const totalWordCount = OneCount + TwoCount + ThreeCount + FourCount;
+    const totalWordCount = OneCount + TwoCount + ThreeCount + FourCount + FiveCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
