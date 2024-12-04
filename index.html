@@ -79,7 +79,7 @@ tr:nth-child(even) {
 
 <h3 id="Introduction">Introduction</h3>
   <p class="ex1">
-    <pre>
+    <pre id=1_Text>
       Main Article still being heavily drafted...
     </pre>
 
@@ -87,20 +87,20 @@ tr:nth-child(even) {
   
 <h3 id="Rolling Stock">Rolling Stock</h3>
   <p class="ex1">
-    <pre>
+    <pre id=2_Text>
       Main Article still being heavily drafted...
     </pre>
 
   <h3 id="Timing">Timing</h3>
   <p class="ex1">
-    <pre>
+    <pre id=3_Text>
       Main Article still being heavily drafted...
     </pre>
   </p>
   
   <h3 id="How do they make it good">How do they make it good</h3>
   <p class="ex1">
-    <pre>
+    <pre id=4_Text>
       Main Article still being heavily drafted...
     </pre>
 
@@ -191,10 +191,12 @@ tr:nth-child(even) {
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const OneCount = displayWordCount("1_Text");
+    const TwoCount = displayWordCount("2_Text");
+    const ThreeCount = displayWordCount("3_Text");
+    const FourCount = displayWordCount("4_Text");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = OneCount + TwoCount + ThreeCount + FourCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
