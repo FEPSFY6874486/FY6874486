@@ -7,7 +7,7 @@
  <h1><b>ENG0018 Computer Laboratory 2024/25</b></h1>
   <h2>Student URN: 6874486</h2>
 
-    <h2 style="font-family:calibri:"><b>Conference paper: Challenges that come with creating a good timetable for South Western Railway</b></h2>
+    <h2 style="font-family:calibri;"><b>Conference paper: Challenges that come with creating a good timetable for South Western Railway</b></h2>
   
 
   <!style for tables>
@@ -50,7 +50,7 @@ tr:nth-child(even) {
       <td><a href="#Abstract">Abstract</td>
     </tr>
     <tr>
-      <td><a href="#Introdcution">Introduction</td>
+      <td><a href="#Introduction">Introduction</td>
     </tr>
     <tr>
       <td><a href="#Rolling Stock">Rolling Stock</td>
@@ -70,8 +70,9 @@ tr:nth-child(even) {
    <h3 id="Abstract">Abstract</h3>
   <p class="ex1">
     <p>
-      People love to complain about how the trians are always late, never on time, cancelled, however, there are lots of aspects which can impact the "perfect case scenario" timetable that the Train planners for SWR produce. 
-      We'll be taking a look at SWRs main "trunk route", the SWML between London Waterloo, through to Working and onto the Portsmouth Direct Line (PDL)
+      People love to complain about how the trains are always late, never on time, or even cancelled, however, there are lots of aspects which can impact the "perfect case scenario" 
+      timetable that the Train planners for SWR produce. 
+      We'll be taking a look at SWRs main "trunk route", the South Western Mainline (SWML) between London Waterloo, through to Working and onto the Portsmouth Direct Line (PDL).
     </p>
 </p>
 
@@ -80,47 +81,120 @@ tr:nth-child(even) {
 <h3 id="Introduction">Introduction</h3>
   <p class="ex1">
     <p id=1_Text>
-      <p>
-      SWR is a Train Operating Company (TOC), who is owned by the FirstGroup and the MTR Corporation. With operating a mix of commuter, semi-fast and fast services, in order to aid people getting from the busy capital from 
-      Waterloo and travel as far as Weymouth in Dorset. But in this article, we’ll be focussing on the SWML from Waterloo to Woking and then the PDL to Guildford which leaves the SWML at Woking, hooks around past Worplesdon and arrives at Guildford. (‘South Western Railway’, 2024; ‘South Western Main Line’, 
-      2024; ‘Portsmouth Direct Line’, 2024)
-      </p>
-      <p id=5_Text>
-      There are 3 core aspects when it comes to timetabling, timetabling (timing), roster diagrams and rolling stock diagrams. Each of these have you could say own subset among them, but that’s a bit too complicated, we’ll be mainly looking at the surface of the timing 
-      section and what they do to make the timetable as optimal as possible.
-        </p>
+      SWR is a Train Operating Company (TOC), who is owned by the FirstGroup and the MTR Corporation. They operate both fast and slow trains, in order to aid 
+      people getting from the busy capital from 
+      Waterloo and travel as far as Weymouth in Dorset. But in this article, we’ll be focussing on the SWML from Waterloo to Woking and then the PDL to Guildford which leaves the 
+      SWML at Woking, hooks around past Worplesdon and arrives at Guildford. (<a href="#References">‘South Western Railway’, 2024</a>; <a href="#References">‘South Western Main Line’, 
+      2024</a>; <a href="#References">‘Portsmouth Direct Line’, 2024)</a>
+      <br>
+      <br>
+      There are 3 core aspects when it comes to timetabling. We’ll be mainly looking at the surface of the timing section and what they do to make the timetable good.
     </p>
   </p>
   
 <h3 id="Rolling Stock">Rolling Stock</h3>
   <p class="ex1">
     <p id=2_Text>
-      The trains that we’ll be focussing on are SWRs EMU fleet of 455s, 458/5s, 444s and 450s. SWR in the past used to run 707s and 456s however, these are no longer in service. SWR are also slowly rolling out their new fleet of 701s (Arterio trains).
-      Below you’ll be able to look at them, as you can see they’re no the biggest of units however, you can connect the 450s and 444s together and you’ll be able to pass through them. The new 701 however, is a fixed unit so it won’t be needed to be joined with another 
-      train. When they used to operate the 456 they could have 10 car units, however, this is no longer the case as they’ve been scrapped.
+      The trains that we’ll be focussing on are SWRs EMU fleet of 455s, 458/5s, 444s and 450s.
+      SWR are also slowly rolling out their new fleet of 701s (Arterio trains).
+      They’re not the biggest of units however, you can connect all of them together. The advantage of this is you're able to dyanmically
+      change the lengths of the units depending on demand.
     </p>
 
   <h3 id="Timing">Timing</h3>
   <p class="ex1">
-    <pre id=3_Text>
-      Main Article still being heavily drafted...
-    </pre>
+    <p id=3_Text>
+      When timing a train, there are many different aspects you need to think about, most importantly following Network Rail’s (NR) Train Planning Rules (TPR). TPRs are a list of 
+      rules that all train planners must follow when timing trains. Such as headways, junction margins, and station allocation, and reallocation timings as well as engineering and 
+      performance allowances. Which give extra time in the timetable to allow it to run on time. All this information is open access and available for anyone to read, the TPRs also 
+      state which stations must be included when timing.
+      <br>
+      <br>
+      There are a number of things which forms the foundations of a timetable. Such as signalling, line speeds, type of rolling stock being operated, and stopping paterns, this forms
+      the foundations of a train timetable. We also have Sectional Running Times (SRTs), which is the time it takes for a train to run over a certain part of track, for example, from
+      London Waterloo to Vauxhall, you would have numerous SRTs because you need one for each train that runs on that part of track. The more the trains are standing still and aren't moving they're not making any money
+      so the planners try to make sure that they're running all the time and not wasting money by moving slowly or sub-optimally. (<a href= "#References">Darlington, 2022</a>)
+      <br>
+      <br>
+      ATTUne is a timetabling software that does calculations for you with SRTs for the timings and does the maths with allowances so the train planner just needs to add in the numbers
+      and the software does the maths itself. (<a href="#References">Bellvedi, no date</a>) What the software doesn't do is knowing if trains would collide or not as it doesn't include
+      all the trains on the network.
+      <br>
+      <br>
+      We can use 2 examples of using the TPRs, first being a very common one used by SWR planners and that's being the train turn around time at London Waterloo. This is if you look at
+      the TPR could be found in the "Station Planning Rules", the locations don't effect the constraint however, for an 8 car 455, it would be 7 minutes (<a href= "#References">WX TPR, 2024</a>) 
+      needed for the driver to change ends. For the headways between Clapham Junction and New Malden, which covers all parts of track in between is 2 minutes both ways for non-stopping
+      trains and 2 and half minutes for stopping trains. (<a href= "#References">WX TPR, 2024</a>)
+    </p>
   </p>
   
   <h3 id="How do they make it good">How do they make it good</h3>
   <p class="ex1">
-    <pre id=4_Text>
-      Main Article still being heavily drafted...
-    </pre>
-
+    <p id=4_Text>
+      Well, it’s how you determine to view the word “good”, could have several different connotations to different people. Some may say good is for the people/commuters, others might 
+      say good for performance, employees and finance, well this is where the train planners have the very difficult job of making everyone happy and pleasing the public.
+      <br>
+      <br>
+NR have done a study on where the busiest part of SWR's network, this is all the section between Woking and London Waterloo, which according to the Department for Transport (DfT) is 
+unacceptable. This is due to the passengers having to stand for more than 20 minutes, between Woking and Waterloo, the quickest time would be 30 minutes. However, to decrease the amount of
+passengers who are standing, it's not as easy as adding more trains as there might no be the capacity.
+According to the study in 2050 in order for there to be 85% seats occupied during the peak. 24 trains per hour on the SWML as a base level along with an additional 20 trains per hour during the peak. So there are
+going to be 44 trains per hour going to Waterloo in the morning peak on the fast lines. (<a href="#References">SWML Strategic Study, 2021</a>)
+      <br>
+      <br>
+When it comes to planning most of the time its dictated to what the Office of the Rail and Road and DfT decide when it comes to frequency, where the demand is, how often it runs. Which isn’t really the best 
+because the government always looks at the financials and not really passenger happiness and where the demand is. However, due to the nature of safety and other variables the 
+commuters can’t dictate how the trains run. (<a href="#References">ORR, 2024</a>)
+      <br>
+      <br>
+      Additionally, the railway will be re-nationalised as on of Labour's initiatives.(<a href="#References">Labour, no date</a>) However, people are unsure if it will fix the fundamental issues that the British Railways
+      face and are unsure if renationalisation would solve those issues. (<a href="#References">O'Connell, 2018</a>)
+      <br>
+      <br>
+      <figure>
+        <img src="Figure.png">
+      <figcaption>Figure 1. Shows the planning operation of the railway (Robenek, 2014)</figcaption>
+      </figure>
+      <p id="5_Text">
+As you can see from Figure 1 the making of the train timetable is something that has to be written weeks in advance and that's not even the end of the process there's the other things
+which you have to do like the crew and rolling stock plans.
+<br>
+<br>
+As you can see writing and even optimising a train timetable is a work of art. And this isn't even scratching the surface of all the other things that need to be thought about for example unions, staffing, diagrams.
+Is a massive jigsaw puzzle to fix it all.
+</p>
+    </p>
   </p>
 
 <h3 id="References">References</h3>
   <p class="ex1">
-    <pre>
-      References, well eventually....
-    </pre>
+    <p>     
+      Bellvedi (no date) Bellvedi Timetable and Control Software, Available at: <a href="https://bellvedi.com/attune/#:~:text=ATTUne%20is%20a%20timetable%20planning,timetables%20in%20time%20pressured%20environments">https://bellvedi.com/attune/#:~:text=ATTUne%20is%20a%20timetable%20planning,timetables%20in%20time%20pressured%20environments</a> (Accessed: 25/10/2024)
+      <br>
+      Darlington P. (2022) RailEngineer Available at: <a href="https://www.railengineer.co.uk/timetabling-at-the-heart-of-every-railway/">https://www.railengineer.co.uk/timetabling-at-the-heart-of-every-railway/</a> (Accessed: 15/11/2024)
+      <br>
+      Labour (no date), Getting Britain Moving: Labour's Plan to Fix Britain's Railways. Available at: <a href="https://labour.org.uk/wp-content/uploads/2024/04/GETTING-BRITAIN-MOVING-Labours-Plan-to-Fix-Britains-Railways.pdf">https://labour.org.uk/wp-content/uploads/2024/04/GETTING-BRITAIN-MOVING-Labours-Plan-to-Fix-Britains-Railways.pdf</a> (Accessed: 18/11/2024)
+      <br>
+      Network Rail (2021) South Western Mainline Strategic Study. Available at: <a href="https://www.guildfordsociety.org.uk/South-West-Main-Line-Strategic-Study.pdf">https://www.guildfordsociety.org.uk/South-West-Main-Line-Strategic-Study.pdf</a> (Accessed: 15/11/2024)
+      <br>
+      Office of the Rail and Road (2024) Who we work with, Department for Transport. Available at: <a href="https://www.orr.gov.uk/about/who-we-work-with/governments/department-transport#:~:text=The%20Department%20for%20Transport%20provides,for%20Transport%20and%20his%20team">https://www.orr.gov.uk/about/who-we-work-with/governments/department-transport#:~:text=The%20Department%20for%20Transport%20provides,for%20Transport%20and%20his%20team</a> (Accessed: 15/11/2024)
+      <br>
+      Portsmouth Direct Line (2024), Wikipedia. Available at: <a href="https://en.wikipedia.org/wiki/Portsmouth_Direct_line">https://en.wikipedia.org/wiki/Portsmouth_Direct_line</a> (Accessed: 16/10/2024)
+      <br>
+      Robenek T., Chen J., Bierlaire M. (2014) The Ideal Train Timetabling Planning Problem, Available at: <a href="https://strc.ch/2014/Robenek_EtAl.pdf">https://strc.ch/2014/Robenek_EtAl.pdf</a>
+      <br>
+      South Western Railway (2024), Wikipedia. Available at: <a href="https://en.wikipedia.org/wiki/South_Western_Railway">https://en.wikipedia.org/wiki/South_Western_Railway</a> (Accessed: 16/10/2024)
+      <br>
+      South West Main Line (2024), Wikipedia. Available at: <a href="https://en.wikipedia.org/wiki/South_West_Main_Line">https://en.wikipedia.org/wiki/South_West_Main_Line</a> (Accessed: 16/10/2024)
+      <br>
+      WX TPR (2024), Network Rail Available at: <a href="https://sacuksprodnrdigital0001.blob.core.windows.net/operational-rules/Operational%20Rules/TPR/TPR%202025/V4/TPR%202025%20V4%20WX.pdf">https://sacuksprodnrdigital0001.blob.core.windows.net/operational-rules/Operational%20Rules/TPR/TPR%202025/V4/TPR%202025%20V4%20WX.pdf</a>
+      <br>    
+    </p>
 </p>
+
+<video src="" width="800" height="450" controls>
+  
+</video>
 
 </html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
